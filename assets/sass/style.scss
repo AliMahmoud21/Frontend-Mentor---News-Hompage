@@ -1,0 +1,148 @@
+@use 'global' as*;
+@use 'mixins' as*;
+@use 'variables' as*;
+@use 'media_queries' as*;
+
+
+// Start Styling Header Section
+.header {
+    .container {
+        @include flex-between;
+        .logo {
+            max-width: 100%;
+        }
+        .main-nav {
+            @include flex-end;
+            ul {
+                display: flex;
+                li {
+                    font-size: 1rem;
+                    a {
+                        padding-left: 2.1875rem;
+                        color: $Darkgrayishblue;
+                        transition: $transition;
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Start Styling News Section
+.news {
+    margin-top: -120px;
+    .container {
+        @include flex-between;
+        .col-1 {
+            margin-right: 2.5rem;
+            .image {
+                width: 43.135rem;
+                img {
+                    width: 100%;
+                }
+            }
+            .content {
+                @include flex-between;
+                margin-top: 1.5rem;
+                h1 {
+                    font: {
+                        size: 3.5rem;
+                        weight: 800;
+                    }
+                    line-height: 1;
+                }
+                .text {
+                    margin: {
+                        bottom: -0.2rem;
+                    }
+                    p {
+                        line-height: 1.6;
+                        color: $Darkgrayishblue;
+                    }
+                    button {
+                        color: $Off-white;
+                        border: none;
+                        outline: none;
+                        background-color: $red;
+                        margin-top: 2.5rem;
+                        padding: 1.1rem 1.5rem;
+                        letter-spacing: .3rem;
+                        font-weight: 700;
+                        cursor: pointer;
+                        transition: $transition;
+                        &:hover {
+                            background-color: $Verydarkblue;
+                        }
+                    }
+                }
+            }
+        }
+        .col-2 {
+            background-color: $Verydarkblue;
+            width: 850px;
+            padding: 1.5rem;
+            color: $Off-white;
+            h1 {
+                color: $orange;
+                margin-bottom: 1.8rem;
+                font: {
+                    size: 2.5rem;
+                }
+            }
+            .news-headlines {
+                margin: 1.2rem 0;
+                h2 {
+                    font-size: 1.2rem;
+                    transition: $transition;
+                    cursor: pointer;
+                    &:hover {
+                        color: $orange;
+                    }
+                }
+                p {
+                    margin-top: 10px;
+                    font-size: .9rem;
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+}
+
+// Start Styling Others
+.others {
+    margin-top: -80px;
+    .container {
+        display: flex;
+        gap: 1.8rem;
+        .article {
+            display: flex;
+            .image {
+                img {
+                    max-width: 6.25rem;
+                }
+            }
+            .text {
+                margin-left: 15px;
+                span {
+                    color: $Grayishblue;
+                    font: {
+                        size: 32px;
+                        weight: 700;
+                    }
+                }
+                h4 {
+                    margin: 12px 0;
+                }
+                p {
+                    font-size: 15px;
+                    color: $Darkgrayishblue;
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+}
