@@ -136,6 +136,11 @@
                 }
                 h4 {
                     margin: 12px 0;
+                    cursor: pointer;
+                    transition: $transition;
+                    &:hover {
+                        color: $orange;
+                    }
                 }
                 p {
                     font-size: 15px;

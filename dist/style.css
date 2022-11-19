@@ -218,6 +218,11 @@ body {
 }
 .others .container .article .text h4 {
   margin: 12px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.others .container .article .text h4:hover {
+  color: hsl(35deg, 77%, 62%);
 }
 .others .container .article .text p {
   font-size: 15px;
